@@ -25,6 +25,6 @@ int main() {
     int arr[] = {1, 2, 3, 4, 5};
     int n = sizeof(arr)/sizeof(arr[0]);
     int key = 3;
-    int result = search(arr, 0, n, key);
+    int result = search(arr, 0, n-1, key);
     cout << "result: found at: " << result << endl;
 }
