@@ -1,2 +1,3 @@
 # DSA-3
-Data Structures and Algorithms
+Description: Contains code for basic Data Structures and Algorithms
+Programming Language: C++
