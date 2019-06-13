@@ -19,6 +19,9 @@ int main() {
     int place = josephus(n, k);
     cout << "The chosen place " << place << endl; 
 }
+
+// TIME COMPLEXITY: O(n)
+
 /**
  * There are n people standing in a circle waiting to be executed. 
  * The counting out begins at some point in the circle and proceeds around the circle
@@ -41,3 +44,5 @@ int main() {
  * The persons at positions 3, 6, 2, 7, 5, 1 are killed in order, and 
  * person at position 4 survives.
  */
+
+// TO DO : IMPLEMENT USING STACK
