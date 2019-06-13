@@ -45,4 +45,4 @@ int main() {
  * person at position 4 survives.
  */
 
-// TO DO : IMPLEMENT USING STACK
+// TO DO : IMPLEMENT USING ARRAY
