@@ -15,6 +15,13 @@ int sumOfDigits(int n)
     n = n/10;
     return (digit + sumOfDigits(n));
 }
+
+ 
+//  unsigned int foo(unsigned int n, unsigned int r) {
+//   if (n  > 0) return (n%r +  foo (n/r, r ));
+//   else return 0;
+// }
+
 //Position this line where user code will be pasted.
 int main() {
 	int T;
