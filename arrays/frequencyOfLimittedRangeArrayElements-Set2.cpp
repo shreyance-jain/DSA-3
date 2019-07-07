@@ -3,6 +3,9 @@ using namespace std;
 
 
 // Function to count frequencies of elements in the array
+// this solution has 3 traversals of O(n)
+// the set 1 approach is better
+// concepts are equally good
 void printfrequency(int arr[], int n)
 { 
 	for(int i = 0; i < n; i++)
