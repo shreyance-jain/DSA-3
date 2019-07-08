@@ -1,6 +1,11 @@
 #include <iostream>
 using namespace std;
 
+// Company tags: Amazon, FactSet, GoldmanSachs, Paytm
+
+// Function to convert given array to wave like array
+// a1 >= a2 <= a3 >= a4 <= a5...
+
 void convertToWave(int *arr, int n){
     
     // a1 >= a2 <= a3 >= a4 <= a5...
@@ -43,5 +48,3 @@ int main()
         cout<<endl;
     }
 }
-// Function to convert given array to wave like array
-// a1 >= a2 <= a3 >= a4 <= a5...
