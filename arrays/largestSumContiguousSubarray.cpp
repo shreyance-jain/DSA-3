@@ -7,7 +7,7 @@ using namespace std;
 int maxSubarraySum(int arr[], int n){
     
     int max_so_far = INT_MIN; int max_ending_here = 0;
-    int start, end, s;
+    int start = 0, end = 0, s = 0;
     for(int i = 0; i < n; i++){
         max_ending_here = max_ending_here + arr[i];
         if (max_so_far < max_ending_here){
