@@ -56,6 +56,8 @@ Our array is like a ring */
 int circularSubarraySum(int arr[], int num){
     int k = kadane(arr, num);
     int rk = reverseKadane(arr, num);
+    // for case like -1 -2 -4 -4 -2 i.e. all negatives k will be -1
+    if (k == -1) return -1; 
     return max(k, rk);
 }
 
