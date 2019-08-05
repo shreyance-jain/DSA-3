@@ -107,3 +107,7 @@ int main(){
     }
     return 0;
 }
+// Time Complexity: O(n)
+// Auxiliary Space: O(1)
+
+// Comapany tags: Accolite, Amazon, D-E-Shaw, Microsoft, Nagarro
