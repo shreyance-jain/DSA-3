@@ -56,3 +56,5 @@ long long int floorSqrt(long long int x)
 // Time Complexity: O(log x)
 // Note: The Binary Search can be further optimized to start with ‘start’ = 0 and ‘end’ = x/2. 
 // Floor of square root of x cannot be more than x/2 when x > 1.
+
+// Company tags: Accolite, Amazon, Flipkart, Microsoft, VMWare
