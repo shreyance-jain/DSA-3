@@ -58,7 +58,7 @@ int countOccurence(int arr[], int n, int k)
     if (k < 2)
         return 0;
     int totalCount = 0;
-    
+
     // temp array of size k-1 contains elements and counts,
     
     struct eleCount temp[k-1];
@@ -146,3 +146,8 @@ int main()
     }
     return 0;
 }
+
+// Time: 0(nk)
+// Space: O(k)
+
+// Company tags: Amazon
