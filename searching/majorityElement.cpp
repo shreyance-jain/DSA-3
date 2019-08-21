@@ -63,8 +63,8 @@ using namespace std;
 int getCandidate(int a[], int size) {
     int maj_index = 0;
     int count = 1;
-    for(int i = 0; i < size; i++) {
-        if(a[maj_index] == a[i+1]) {
+    for(int i = 1; i < size; i++) {
+        if(a[maj_index] == a[i]) {
             count++;
         } else {
             count--;
