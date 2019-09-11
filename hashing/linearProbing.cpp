@@ -103,6 +103,8 @@ void linearProbing(int hash[],int hashSize,int arr[],int sizeOfArray)
             // we need to find the next -1 and insert the element in that position
             // if can't find such a position the we need to drop this element
             int count = 1;
+            // condition for count to be less than hashSize if because we are doing modulus using hashSize, once
+            // count will become greater than hashSize then its modulus will give us repeated values
             while( hash[(arr[j] + count ) % hashSize] != -1 && count < hashSize)
                 count++;
             if (count != hashSize) {
