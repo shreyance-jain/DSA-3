@@ -102,3 +102,7 @@ int countSubarrayWithZeroSum(int arr[], int n) {
     
     return count;
 }
+
+// Time Complexity: O(n), under hashing standard assumptions
+// Aux Space: O(n)
+// Company Tags: Amazon, Microsoft, Oyo Rooms
