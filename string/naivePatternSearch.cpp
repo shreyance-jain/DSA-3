@@ -73,12 +73,17 @@ In this way we will iterate till the whole string is exhausted
 bool search(string pat, string txt) 
 { 
 	int n = txt.length(), m = pat.length();
-	int i, j;
-	for(i = 0; i <= n - m; i++) {
+
+    // loop to slide pattern one by one
+	for(int i = 0; i <= n - m; i++) {
+        int j;
+
+        // for current index i, check for pattern match
 	    for(j = 0; j < m; j++)
 	        if(txt[i+j] != pat[j])
 	           break;
-	    if(j == m)
+
+	    if(j == m) // if pat[0...M] = txt[i, i+1, .... i + M-1]
 	        return true;
 	}
 	return false;
