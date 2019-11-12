@@ -1,5 +1,5 @@
 /* 
-Isomorphic Strings
+Isomorphic Strings (all occureneces of every character of 'str1' map to same character is 'str2')
 
 Problem Statement
 
