@@ -67,6 +67,8 @@ int main() {
                because, with pointer we can only change the value it is pointing to we cannot change where it is pointing to
             2. pass address of head, contain it in double pointer, i.e. pointer to pointer, add a new node and chnage
                where head is pointing to (chnage where pointer is pointing to   ) */
+            // Here we are implementing the second approach, 
+            // approach no.1 is used in linked list insertion.cpp
             push(&head, l);
         }
         // check the count function
