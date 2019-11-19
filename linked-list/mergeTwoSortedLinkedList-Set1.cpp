@@ -38,16 +38,16 @@ void append(Node** head_ref, Node** tail_ref, int new_data) {
 /* This function take the node of the linked list from source
 update head of source
 and append the node to dest which is new linked list here */
-void moveNode(Node** head, Node** tail, Node** source) {
-  Node* newNode = *source;
-  *source = newNode->next;
+void moveNode(Node** headRef, Node** tailRef, Node** sourceRef) {
+  Node* newNode = *sourceRef;
+  *sourceRef = newNode->next;
 
-  if (*head == NULL) {
-    *head = newNode;
+  if (*headRef == NULL) {
+    *headRef = newNode;
   } else {
-    (*tail)->next = newNode;
+    (*tailRef)->next = newNode;
   }
-  (*tail) = newNode;
+  (*tailRef) = newNode;
 }
 
 /* 
