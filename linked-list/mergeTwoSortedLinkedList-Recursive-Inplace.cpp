@@ -79,3 +79,8 @@ Node* sortedMerge(Node* head1, Node* head2)
         return head2;
     }
 }
+
+/* 
+Company Tags: Accolite, Amazon, Belzabar, Brocade, FaceSet, Flipkart, MakeMyTrip, Microsoft, OATS Systems,
+            Orcale, Samsung, Synopsys, Zoho
+ */
