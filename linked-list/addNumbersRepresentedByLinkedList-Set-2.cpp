@@ -204,3 +204,5 @@ Node* addTwoLists(Node* first, Node* second) {
         push(&result, carry);
     return result;
 }
+
+// Company tags: Accolite, Amazon, Flipkart, MakeMyTrip, Microsoft, Morgan Stanley, Qualcomm, Snapdeal
