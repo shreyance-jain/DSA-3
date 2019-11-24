@@ -140,3 +140,5 @@ Node* addTwoLists(Node* first, Node* second) {
 }
 
 // Time Complexity: O(n+m) where n and m are no of nodes in first and second linked list respectively
+
+// Company Tags: Accolite, Amazon, Flipkart, MakeMyTrip, Microsoft, Morgan Stanley, Qualcomm, Snapdeal
