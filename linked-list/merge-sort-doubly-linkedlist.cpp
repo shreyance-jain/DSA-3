@@ -110,11 +110,14 @@ Node *sortDoubly(Node *head) {
     if (head == NULL || head->next == NULL)
         return head;
     
+    // split into two halves
     Node *second = split(head);
 
+    // recur on two halves
     head = sortDoubly(head);
     second = sortDoubly(second);
 
+    // merge two sorted halves
     return sortedMerge(head, second);
 }
 
