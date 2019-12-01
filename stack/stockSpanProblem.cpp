@@ -68,6 +68,7 @@ int main()
 	return 0;
 }
 
+/* Add naive approach/code */
 /* Add comments */
 void calculateSpan(int price[], int n, int S[])
 {
