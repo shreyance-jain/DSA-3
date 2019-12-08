@@ -46,6 +46,7 @@ Testcase 1: Inserting 2, 4, 3, and 5 onto the queue: 2 4 3 5. h means front. So 
 #include <bits/stdc++.h>
 using namespace std;
 
+/* Declarations */
 void enqueue(queue<int> &, int);
 void dequeue(queue<int> &);
 void front(queue<int> &);
