@@ -58,8 +58,9 @@ int main() {
     cout << endl;
 }
 
-/* The idea is to use a stack to reverse the queue
-If we use recursion then also it would internally use recursion call stack */
+/* The idea is to use a recursion
+recursion would internally use recursion call stack
+and we will reverse the queue with help of it */
 void rev(queue<long long int> &q)
 {
     if (q.empty())
