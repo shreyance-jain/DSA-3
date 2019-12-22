@@ -21,12 +21,20 @@ The output of print this tree vertically will be:
 9 
  */
 
-/* The idea is to traverse the tree once and get the min and max horizontal distance
-with respect to root. For the tree shown above, min distance is -2(for node wiht value 1)
-and maximum distance is 3(for node with value 9)
-Once we have maximum and minimum distances from root, we iterate each vertical line
-at distance minimum to maximum from root,
-and for each vertical line traverse the tree and print nodes which lies on that vertical line*/
+/* We have discussed a O(n^2) soultion in set-1
+In this, we implement an efficient solution based on hashmap
+We need to check horizontal distances from root for all nodes.
+If two nodes have same horizontal distances(HD), then they are on same vertical lines.
+The idea of HD is simple. HD for root is 0, a right edge connecting to right subtree
+is considered as +1 horizontal distance and a left edge is considered as -1 horizontal distance.
+For example, in above tree, HD for node 4 is -2, HD for node 2 is -1, HD for 5 and 6 is 0 and HD for node 7 is +2
+We can do preorder travresal of the given binary tree. While traversing the tree, we can recusively calculate HDs
+We initially pass the horizontal distance for root as 0.
+For left subtree we pass the hd as hd of root -1 
+for right subtree we pass the hd as hd of root +1
+For every HD value, we maintain a list of nodes in a hash map.
+Whenever we see a node in traversal, we go to hash map entry and
+add the node to the hash map using HD as a key in map*/
 #include<bits/stdc++.h>
 using namespace std;
 
@@ -40,42 +48,32 @@ struct Node {
 	}
 };
 
-void findMinMax(Node *node, int *min, int *max, int hd) {
-	if (node == NULL)
-		return;
-	if (hd < *min)
-		*min = hd;
-	else if (hd > *max)
-		*max = hd;
-	findMinMax(node->left, min, max, hd -1);
-	findMinMax(node->right, min, max, hd+1);
-}
-
-void printVerticalLine(Node *node, int line_no, int hd) {
+/*fucntion to store vertical order in map 'm'
+'hd' is horizontal distance of current node from root
+'hd' is initially passed as 0*/
+void getVerticalOrder(Node *node, int hd, map<int, vector<int>> &m) {
 	// base case
 	if (node == NULL)
 		return;
-	if (line_no == hd)
-		cout << node->data << " ";
-	printVerticalLine(node->left, line_no, hd - 1);
-	printVerticalLine(node->right, line_no, hd + 1);
+	// store current node in map 'm'
+	m[hd].push_back(node->data);
+	// store nodes in left subtree
+	getVerticalOrder(node->left, hd - 1, m);
+	// store nodes in right subtree
+	getVerticalOrder(node->right, hd + 1, m);
 }
 
-void inorder(Node *root) {
-	if (root != NULL) {
-		inorder(root->left);
-		cout << root->data << " "; 
-		inorder(root->right);
-	}
-}
 
 void verticalOrder(Node *root) {
-	int min = 0, max = 0;
-	findMinMax(root, &min, &max, 0);
-	inorder(root);
-	cout << "min: " << min << "max: " << max << endl;
-	for(int line_no = min; line_no <= max; line_no++) {
-		printVerticalLine(root, line_no, 0);
+	// map to store vertical order
+	map<int, vector<int>> m;
+	int hd = 0;
+	getVerticalOrder(root, hd, m);
+	map<int, vector<int>>::iterator it;
+	// traverse map and store nodes at each horizontal distance
+	for(it = m.begin(); it != m.end(); it++) {
+		for(int i = 0; i < it->second.size(); ++i)
+			cout << it->second[i] << " ";
 		cout << endl;
 	}
 }
@@ -112,3 +110,10 @@ int main() {
 		cout << endl;
 	}
 }
+
+// Time Complexity: Time complexity of this hashing based solution cane be considered as O(n) under
+// the assumption that we have a good hashing function that allows insertion and retrieval operations
+// as O(1) time. In above C++ implementation, map of STL is used.
+// map in STL is typically impelemented using a Self-Balancing Binary Search Tree, where all operations
+// take O(logn) time. Therefore the time complexity of above solution is O(nlogn)
+// This solution MAY print nodes 	
