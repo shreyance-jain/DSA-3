@@ -27,6 +27,7 @@ and maximum distance is 3(for node with value 9)
 Once we have maximum and minimum distances from root, we iterate each vertical line
 at distance minimum to maximum from root,
 and for each vertical line traverse the tree and print nodes which lies on that vertical line*/
+
 #include<bits/stdc++.h>
 using namespace std;
 
@@ -41,16 +42,23 @@ struct Node {
 };
 
 void findMinMax(Node *node, int *min, int *max, int hd) {
+        // base case
 	if (node == NULL)
 		return;
+        
+        // update min and max
 	if (hd < *min)
 		*min = hd;
 	else if (hd > *max)
 		*max = hd;
+        
+        // recur for left and right subtrees
 	findMinMax(node->left, min, max, hd -1);
 	findMinMax(node->right, min, max, hd+1);
 }
 
+/* function to print all nodes at given hd(line no) from root
+hd is horizontal distance with respect to root*/
 void printVerticalLine(Node *node, int line_no, int hd) {
 	// base case
 	if (node == NULL)
@@ -71,9 +79,11 @@ void inorder(Node *root) {
 
 void verticalOrder(Node *root) {
 	int min = 0, max = 0;
+        // find min and max distances from root
 	findMinMax(root, &min, &max, 0);
-	inorder(root);
-	cout << "min: " << min << "max: " << max << endl;
+
+        // iterate through all possible vertical lines starting from leftmost
+        // and print nodes line by line
 	for(int line_no = min; line_no <= max; line_no++) {
 		printVerticalLine(root, line_no, 0);
 		cout << endl;
@@ -112,3 +122,10 @@ int main() {
 		cout << endl;
 	}
 }
+
+// Time Complexity of above algorithm is O(w * n) where w is width of tree and n is no od nodes of binary tree
+// In worst case value of w can vbe O(n) and so worst case complexity will be O(n ^ 2)
+
+// also the above algorithm will print the values in preorder, so the nodes at same horizontal distances
+// would might not appear in same order as in given tree i.e. at a given vertical line
+// nodes below in line can get printed before nodes above in line
