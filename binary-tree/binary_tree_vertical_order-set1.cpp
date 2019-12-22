@@ -90,7 +90,6 @@ void verticalOrder(Node *root) {
 	}
 }
 
-
 int main() {
 	int t;
 	cin >> t;
