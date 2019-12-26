@@ -130,7 +130,7 @@ int main()
 
 // a node x is in output if x is the topmost node at its horizontal distance
     
-// idea is similar to level order traversal, like level order traversal we need to put
+// idea is similar to vertical order traversal, like level order traversal we need to put
 // nodes at same horizontal distance together
 // we do a level order traversal so that topmost node at a horizontal distance
 // is visited before any other node of same horizontal distance below it
