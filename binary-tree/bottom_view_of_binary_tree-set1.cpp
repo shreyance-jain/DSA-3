@@ -170,5 +170,5 @@ void bottomView(Node *root)
 }
 
 // Time Complexity: Simple level order traversal O(n)
-// Aux Space : O(n)
+// Aux Space Complexity: O(n)
 // Company Tags: Accolite, Amazon, CouponDunia, Flipkart, OYO Rooms, Paytm, Walmart

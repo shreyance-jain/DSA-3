@@ -175,6 +175,6 @@ void topView(struct Node *root)
 }
 
 // Time Complexity: O(n)
-// Space Compleity: Theta(height + 1) or O(height)
+// Space Compleity: Theta(height + 1) which can be bounded by O(n)
 
 // Company Tags: Amazon, Ola Cabs, Paytm, Samsung, Walmart
