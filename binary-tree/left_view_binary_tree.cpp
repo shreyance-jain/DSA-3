@@ -144,7 +144,7 @@ and print the first node of every level
 The problem can also be solved using simple recursive traversal
 Pre-order traversal traverse the left node first
 
-We can keep track of the level of node by passing a parameter to recursive calls
+We can keep track of level of node by passing a parameter to all recursive calls
 The idea is to keep track of maximum_level also.
 maximum_level is to maintain the max level which is visited so far
 Whenever we see a node whose level is less than max_level we don't print it i.e. we discard it
