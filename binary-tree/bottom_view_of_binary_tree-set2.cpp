@@ -162,5 +162,5 @@ void bottomView(Node *root)
 
 
 // Time Complexity: Simple recursive traversal O(n)
-// Aux Space : O(heights)
+// Aux Space : O(height)
 // Company Tags: Accolite, Amazon, CouponDunia, Flipkart, OYO Rooms, Paytm, Walmart
