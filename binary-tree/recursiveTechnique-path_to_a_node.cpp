@@ -62,9 +62,13 @@ bool fillPath(Node *root, int key, vector<int> &path) {
     if (root->key == key)
         return true;
     
+    // need to check/know if current node leads to correct path
     if ((root->left && fillPath(root->left, key, path)) || 
         (root->right && fillPath(root->right, key, path)))
         return true;
+
+    // if not present in subtree rooted with root,
+    // remove root from path[] and return false
     path.pop_back();
     return false;
 }
