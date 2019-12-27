@@ -68,7 +68,7 @@ bool fillPath(Node *root, int key, vector<int> &path) {
         return true;
 
     // if not present in subtree rooted with root,
-    // remove root from path[] and return false
+    // remove root from path[] (the last pushed item)and return false
     path.pop_back();
     return false;
 }
