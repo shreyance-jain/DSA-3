@@ -112,7 +112,7 @@ void getWidthUtil(Node *node, int *min, int *max, int hd) {
         *max = hd;
     getWidthUtil(node->left, min, max, hd - 1);
     getWidthUtil(node->right, min, max, hd + 1);
-}
+} // note: we are doing preorder, inorder or postorder traversals would also be same
 
 int verticalWidth(Node* root)
 {
