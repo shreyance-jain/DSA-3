@@ -139,6 +139,9 @@ void mirror(Node* node)
 } // note we have to swap pointes of each node, so we can make either tail recursive or head recursive
 // it will make no difference in end
 
+// We can do this iteratively by doing level order traversal using queue
+// while doing traversal swap left and right children of every node
+
 // Time Complexity: Same as traversal O(n)
 // Space Complexity: Same as traversal O(height)
 
