@@ -204,7 +204,7 @@ void connect(Node *p)
 // Time Complexity: Same as level order traversal, O(n)
 
 // Aux Space: Same as level order traversal,
-// Aux Space: Theta(widht) whose upper bound is O(n) for balanced binary trees no of nodes in last row is n + 1 / 2
+// Aux Space: Theta(width) whose upper bound is O(n) for balanced binary trees no of nodes in last row is n + 1 / 2
 
 // Company Tags: Accolite, Adobe, Amazon, Boomerang Commerce, Flipkart, Google, Microsoft,
 // Ola Cabs, Oracle, OYO Rooms, Xome
