@@ -175,6 +175,7 @@ The distance from n1 to n2 can be computed as distance of n1 from root, plus
 distance of n2 from root, minus double the distance of LCA from root */
 
 // Time Complexity: O(n) two traversals of tree then path vectors are compared
+// Require extra space to store path to nodes
 
 // Company Tags: Accolite, Amazon, American Express, Cisco, Expedia, Flipkart, MakeMyTrip
 // Microsoft, OYO Rooms, Paypal, Payu, Snapdeal, Times Internet, Twitter
