@@ -205,7 +205,7 @@ Node *getNextRight(Node *p) {
     // if all nodes at p's level are leaf node retrun NULL
     return NULL;
 }
-// Time Complexity: More than O(n)
+// Time Complexity: More than O(n), traverse every node, calls getNextRight() in same conditions
 
 // Aux Space: O(1)
 
