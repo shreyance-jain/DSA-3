@@ -78,37 +78,14 @@ void verticalOrder(Node *root) {
 	}
 }
 
+void passByRef(int arr[]) {
+	arr[2] = -1;
+}
 
 int main() {
-	int t;
-	cin >> t;
-	while(t--) {
-		int n;
-		cin >> n;
-		Node *root = NULL;
-		map<int, Node *> m;
-		while(n--) {
-			int n1, n2;
-			char lr;
-			Node *parent, *child;
-			cin >> n1 >> n2 >> lr;
-			if (m.find(n1) == m.end()) {
-				parent = new Node(n1);
-				m[n1] = parent;
-				if (root == NULL)
-					root = parent;
-			} else
-				parent = m[n1];
-			child = new Node(n2);
-			m[n2] = child;
-			if (lr == 'L')
-				parent->left = child;
-			else
-				parent->right = child;
-		}
-		verticalOrder(root);
-		cout << endl;
-	}
+	int t[3] = {1, 0, 1};
+	passByRef(t);
+	cout << t[2] << endl;
 }
 
 // Time Complexity: Time complexity of this hashing based solution cane be considered as O(n) under
