@@ -144,31 +144,41 @@ Traverse the parent array
   
 2. if parent[i] == -1, check if that node exist in map
 (it may exist if its child occur first and we have created it there)
-  if yes, then set head to that node, else create a node, set head to it and continue
+  if yes, then set root to that node, else create a node, set root to it and continue
   */
 Node *createTree(int parent[], int n)
 {
-    Node *head = NULL;
+    Node *root = NULL;
+    // use map to create tree
+    
+    // map of node data value and node
     map<int, Node *> m;
+
+    // traverse parent array
     for(int i = 0; i < n; i++) {
+      // if parent[i] is -1, root node
         if (parent[i] == -1) {
+          // if node is present, set root
             if (m.find(i) != m.end()) {
-                head = m[i];
-            } else {
-                head = new Node(i);
-                m[i] = head;
+                root = m[i];
+            } else { // else create and set root
+                root = new Node(i);
+                m[i] = root;
             }
             continue;
         }
-        Node *temp;
+
+        Node *p;
+        // it parent is present
         if (m.find(parent[i]) != m.end()) {
-            temp = m[parent[i]];
+            p = m[parent[i]];
         } else {
             // if parent is not present in the tree first, create the parent
-            temp = new Node(parent[i]);
-            m[parent[i]] = temp;
+            p = new Node(parent[i]);
+            m[parent[i]] = p;
         }
         
+        // if child node not present in map
         Node *child_node;
         if (m.find(i) == m.end()) {
             child_node = new Node(i);
@@ -178,12 +188,12 @@ Node *createTree(int parent[], int n)
             child_node = m[i];
         
         // fill left child first if not present
-        if (temp->left == NULL)
-            temp->left = child_node;
+        if (p->left == NULL)
+            p->left = child_node;
         else // fill right child if left child is present
-            temp->right = child_node;
+            p->right = child_node;
     }
-    return head;
+    return root;
 }
 
 // Time Complexity: O(n)
