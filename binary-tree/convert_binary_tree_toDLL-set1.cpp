@@ -178,7 +178,7 @@ void convert(Node *root, Node **head_ref, Node **prev) {
     // update prev
     *prev = root;
     
-    // recur left
+    // recur for left
     convert(root->right, head_ref, prev);
 }
 
