@@ -211,7 +211,7 @@ Node *buildTree(int in[], int post[], int n)
 
 // Time Complexity: we traverse the postorder once and for every element we search in inorder[], in worst case O(n ^ 2)
 // we can optimize the above solution using hashmap.
-// We store indexes of inorder traversal in a hash table, so search can be done in O(1)
+// We store indexes of inorder traversal in a hash table, so search can be done in O(1) (implemented in set-2)
 
 
 // Company Tags: Adobe, Amazon, Hike
