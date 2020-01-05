@@ -133,6 +133,6 @@ void zigZagTraversal(Node* root)
 }
 
 // Time Complexity: O(n) does simple level order traversal
-// Space Complexity: O(n), uses 2 stacks
+// Space Complexity: O(n), uses 2 stack
 
 // Company Tags: Amazon, Cisco, FaceSet, Hike, Snapdeal, Walmart
