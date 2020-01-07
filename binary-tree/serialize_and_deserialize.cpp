@@ -178,3 +178,5 @@ Node * deSerialize(vector<int> &A)
 
 // the code to deserialise can be optimised,
 // see set-2 of this problem
+// beacuse the deserialize code here is written
+// with child node level view in consideration
