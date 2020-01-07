@@ -134,9 +134,11 @@ int getMaxSum(Node *root, int *maxSum) {
     // recur for right
     int right_sum = getMaxSum(root->right, maxSum);
     
-    // now max sum can be left_sum or right_sum (we are getting below root sum included in this sum
+    // now max sum can be left_sum or right_sum (we are getting value of node below it included in this sum
     // that is why we are doing one extra comparison in main function)
+
     // also check the possibility : left_sum + right_sum + root->data forms maxSum
+    // (this is when no ancestors of root are in maxpath sum)
     // because in recurrence we are returing by taking on one child in consideration
     *maxSum = max(max(max(left_sum, right_sum), left_sum + right_sum + root->data), *maxSum);
     
