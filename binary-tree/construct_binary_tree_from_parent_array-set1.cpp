@@ -199,4 +199,9 @@ Node *createTree(int parent[], int n)
 // Time Complexity: O(n)
 // Space Complexity: O(n)
 
+// In this case we are using map which is O(logn)
+// We can use unordered_map in c++ to bring it O(1) on average
+// and since the range is limited we can use direct addressing
+// by using an array instead of map or unordered_map in which access is fixed O(1)
+
 // Company Tags: Amazon, Microsoft, Snapdeal
