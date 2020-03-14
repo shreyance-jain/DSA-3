@@ -258,11 +258,9 @@ void connect(Node *p)
                     curr->left->nextRight = getNextRight(curr);
                     q.push(curr->left);
                 }
-            } else {
-                if (curr->right) {
-                    curr->right->nextRight = getNextRight(curr);
-                    q.push(curr->right);
-                }
+            } else if (curr->right) {
+                curr->right->nextRight = getNextRight(curr);
+                q.push(curr->right);
             }
     }
 }
