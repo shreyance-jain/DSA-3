@@ -216,6 +216,20 @@ int main()
   Node *nextRight;  // This has garbage value in input trees
 }; */
 
+Node *getNextRigth(Node *p) {
+    if (p == NULL)
+        return NULL;
+    Node *temp = p->nextRigth;
+    while(temp) {
+        if (temp->left)
+            return temp->left;
+        if (temp->right)
+            return temp->right;
+        temp = temp->nextRigth;
+    }
+    return NULL;
+}
+
 /* 
 The approach here is to do simple level order traversal
 make connection for root (parent)
@@ -237,34 +251,18 @@ void connect(Node *p)
                 // if right child is also present, set nextright of left child as right child
                 if (curr->right != NULL) {
                     curr->left->nextRight = curr->right;
+                    curr->right->nextRigth = getNextRight(curr);
+                    q.push(curr->left);
+                    q.push(curr->right);
                 } else { // get the next right using next right of parent and is applied for right child
-                    if (curr->nextRight == NULL) {
-                        curr->left->nextRight = NULL;
-                    } else {
-                        if (curr->nextRight->left != NULL) {
-                            curr->left->nextRight = curr->nextRight->left;
-                        } else if (curr->nextRight->right != NULL) {
-                            curr->left->nextRight = curr->nextRight->right;
-                        } else {
-                            curr->left->nextRight = NULL;
-                        }
-                    }
+                    curr->left->nextRight = getNextRight(curr);
+                    q.push(curr->left);
                 }
-                q.push(curr->left);
-            }
-            if (curr->right != NULL) {
-                if (curr->nextRight == NULL) {
-                        curr->right->nextRight = NULL;
-                    } else {
-                        if (curr->nextRight->left != NULL) {
-                            curr->right->nextRight = curr->nextRight->left;
-                        } else if (curr->nextRight->right != NULL) {
-                            curr->right->nextRight = curr->nextRight->right;
-                        } else {
-                            curr->right->nextRight = NULL;
-                        }
-                    }
-                q.push(curr->right);
+            } else {
+                if (curr->right) {
+                    curr->right->nextRight = getNextRight(curr);
+                    q.push(curr->right);
+                }
             }
     }
 }
