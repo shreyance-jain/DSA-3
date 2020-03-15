@@ -169,6 +169,4 @@ int heightOfTree(Node *root) {
 
 // Company Tags: Flipkart, Microsoft
 
-// GeeksForGeeks have given the solution of this problem by taking the problem in a different understanding
-// All test cases passed for this approach also.
 // GeeksForGeeks solution implemented in set-2 
