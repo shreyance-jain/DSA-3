@@ -171,6 +171,22 @@ for instance, as part of a procedure for determining distance between pair of no
 The distance from n1 to n2 can be computed as distance of n1 from root, plus
 distance of n2 from root, minus double the distance of LCA from root */
 
+/* Note: if the node structure is such that pointer to parent is also given
+we have two options to get the lowest common ancestor:
+Option 1: Time: O(h) and Space: O(h)
+Step 1: Hash the ancestors of one of the node
+Step 2: Traverse the ancestors of the second node if the ancestor is present in the hash then retunr the ancestor
+if any common ancestor is not found return null
+
+Option: 2 Time: O(h) Space: O(1)
+Idea is if both the nodes are at same level then the first common node up the tree is lca
+Step 1: Find the depths of both the nodes using parent pointers traversing up the node
+Move the pointer up from the common node
+Step 2: move the pointer of the deeper node up by the difference in the height of the node
+Step 3: now, move both the pointers up one, the first common node encountered is the lca
+
+Option 3: usign segment tree TBD */
+
 // Time Complexity: O(n)
 // Aux Space: O(height) for function call stack
 
