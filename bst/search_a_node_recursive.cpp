@@ -122,4 +122,6 @@ bool search(Node* root, int x)
 // Time Complexity: O(h) we either go left or right
 // Auxiliary Space: O(h) for function call stack
 
+// Iterative implementation is efficient. O(1) Auxiliary Space
+
 // Company Tags: LinkedIN
