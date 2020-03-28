@@ -181,6 +181,7 @@ Node* insert(Node *root, int key) {
 }
 // Time Complexity: O(h), since we are going either left or right
 // Aux Space: O(h), required for function call stack
+// as recursive, there is function call overhead, iterative is efficient
 
 // Note: Time and Space complexities are similar to search, we simply do search
 // and then constant extra work to add node to the tree
