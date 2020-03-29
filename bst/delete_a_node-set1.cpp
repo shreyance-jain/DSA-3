@@ -199,15 +199,20 @@ Node *getInorderSuccessor(Node *root) {
 
 Node *deleteNode(Node *root,  int x)
 {
+    // base case
     if (root == NULL)
         return root;
     
+    // if key to be deleted is smaller than root
+    // it lies in left subtree
     if (root->data > x)
         root->left = deleteNode(root->left, x);
+    // if key is greater than root, it lies in right subtree
     else if (root->data < x)
         root->right = deleteNode(root->right, x);
+    // if key is same as root's key, this is the node to be deleted
     else {
-        // return something
+        // node with only one child or no child
         if (root->left == NULL) {
             Node *temp = root->left;
             delete root;
@@ -217,7 +222,11 @@ Node *deleteNode(Node *root,  int x)
             Node *temp = root->left;
             delete root;
             return temp;
-        } else { // both left and right child exists
+        }
+        // node with two children
+        else { 
+            // get the inorder successor:
+            // (smallest in right subtree or in other words left most child of root's right child)
             Node *succ = getInorderSuccessor(root);
             // copy successor data in root
             root->data = succ->data;
