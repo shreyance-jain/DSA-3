@@ -204,3 +204,8 @@ bool isBST(Node* root) {
 /* Time Complexity: It simply traverses the tree O(n)
 We can consider this kind of preorder traversal, check for root than for LST and RST
 NOTE: The logical & opreator has short-circuiting so it is optimised automatically */
+// Space Complexity: O(h) same as inorder traversal, where h is the height of given tree */
+
+// Company Tags: Accolite, Adobe, Amazon, Boomerang Commerce, FactSet, Flipkart, Goldman Sachs,
+// GreyOrange, Hike, LinkedIn, MakeMyTrip, MAQSoftware, Ola Cabs, OYO Rooms, Qualcomm, Samsung,
+// Snapdeal, VMWare, Walmart, Wooker
