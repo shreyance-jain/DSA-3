@@ -174,7 +174,8 @@ floor values of the the key and return the min difference
 Time Complexity: O(h), Space Complexity: O(1)
 
 Approach 4: Efficient solution use BST property. Do a height based traversal and no need to maintain ciel and floor
-as we will be moving down in one direction based on comparison with root node data*/
+as we will be moving down in one direction based on comparison with root node data
+and maintain the res as we move down the tree*/
 
 // code for approach 3:
 int maxDiff(Node *root, int key)
