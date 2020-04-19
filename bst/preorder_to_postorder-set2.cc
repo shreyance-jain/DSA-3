@@ -30,8 +30,7 @@ Output:
 35 32 30 120 100 90 80 40
  */
 
-#include<iostream>
-#include<math.h>
+#include <bits/stdc++.h>
 
 using namespace std;
 
