@@ -115,4 +115,9 @@ int getCountOfNode(Node *root, int l, int h)
 
 // Time Complexity: O(h+k)
 // Space Complexity: O(h)
+
+/* Why the time complexity is O(h+k)
+We take decision along the height we traverse the binary tree so O(h)
+and for the nodes which are in range but does not follow till complete depth
+*/
 // Company Tags: DE-Shaw, Google
