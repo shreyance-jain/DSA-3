@@ -90,4 +90,5 @@ Node *constructTree(int pre[], int n)
   return root;
 }
 
+// set-3: uses stack iterative solution
 // Time complexity: O(n)
