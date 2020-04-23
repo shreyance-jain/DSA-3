@@ -106,8 +106,11 @@ int main() {
 
 /*
 Time Complexity: O(n)
+Space Complexity: O(logn) as h is logn for balanced bst, required for function call stack
 Following is the recurrence relation for sortedArrayToBST
   T(n) = 2T(n/2) + C
   T(n) ---> Time taken for an array of size n
   C --> Constant(Finding middle of the array and linking root to left and right subtrees takes constant time)
  */
+
+// Company Tags: Amazon, Cisco, Snapdeal, VMWare
