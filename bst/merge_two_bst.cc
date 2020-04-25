@@ -251,4 +251,6 @@ vector<int> merge(Node *root1, Node *root2)
 // Time complexity: O(m + n), m and n are no of nodes in trees
 // Space complexity: O(h1 + h2)
 
+// Note: Trees remain intact in above code
+
 // Company Tags: Amazon, Google, Microsoft
