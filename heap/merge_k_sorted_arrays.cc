@@ -140,3 +140,5 @@ int *mergeKArrays(int arr[][N], int k)
 // and extractMin and insert are O(log k) are heap size is k
 
 // Company Tags: Amazon, Citrix, Flipkart, Microsoft, VMWare
+
+// Note: for practice implement the full custom min heap class instead of using priority queue.
