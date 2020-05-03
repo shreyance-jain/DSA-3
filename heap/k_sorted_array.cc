@@ -76,13 +76,13 @@ void nearlySorted(int arr[], int n, int k){
     int index = 0;
     
     for(int i = k+1; i < n; i++) {
-        arr[index++] = pq.top();
+        arr[index++] = pq.top(); // cout, if do not want to modify original array
         pq.pop();
         pq.push(arr[i]);
     }
     
     while(pq.empty() == false) {
-        arr[index++] = pq.top();
+        arr[index++] = pq.top(); // cout, if do not want to modify original array
         pq.pop();
     }
     print(arr, n);
