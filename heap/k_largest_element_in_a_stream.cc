@@ -114,7 +114,7 @@ void PROCODE(int arr[], int n, int k)
 	}
 }
 
-// Time Complexity:
-// Space Complexity:
+// Time Complexity: O(nlogk) inserting and extract min are both logk operations
+// Space Complexity: O(k)
 
 // Company Tags: Cisco
