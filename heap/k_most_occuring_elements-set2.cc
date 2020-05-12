@@ -78,12 +78,12 @@ Define hash table as (x, y) tuple, x being key(number) & y being its frequency i
 Now traverse the hash table and create an frequency array which stores these tuples.
 
 We can improve the complexity of the program by using max heap instead of sorting.
-Build the max heap using elements of the frequency array.
+Build the MAX HEAP using elements of the frequency array.
 
-The root of the max heap will be the most frequent number and
+The root of the MAX HEAP will be the most frequent number and
 in case of conflicts the larger number gets the preference.
 
-Now remove the top k numbers of this max heap.
+Now remove the top k numbers of this MAX HEAP.
  */
 
 struct compare {
@@ -107,7 +107,7 @@ int print_N_mostFrequentNumber(int arr[], int n, int k)
     // store the elements of 'm' in the vector 'freq_arr'
     // vector<pair<int, int>> freq_arr(m.begin(), m.end()); we can avoid this step INTERNAL STEP
 
-    // build a max heap out of the tuples in 'freq_arr'
+    // build a MAX HEAP out of the tuples in 'freq_arr'
     // with custom comparator
     priority_queue<pair<int, int>, vector<pair<int, int>>, compare> pq(m.begin(), m.end());
 
@@ -120,5 +120,5 @@ int print_N_mostFrequentNumber(int arr[], int n, int k)
     return ans;
 }
 
-// Time Complexity: O(n + nlogn + klogn) = O(n + (n+k)log n), RECHECK
-// Space Complexity: O(n) for Map + O(n) for Heap = O(n)
+// Time Complexity: O(n + nlogn + klogn) = O(n + (n+k)log n), = O((n+k)*logn)
+// Space Complexity: O(n) for Map + O(n) for MAX HEAP = O(n)
