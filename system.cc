@@ -6,6 +6,8 @@ using namespace std;
 system() is used to invoke an operating system command from a C/C++ program.
 Using system(), we can execute any command that can run on terminal if operating system allows.
 For example, we can call system(“dir”) on Windows and system(“ls”) to list contents of a directory.
+
+For detailed information: https://www.geeksforgeeks.org/system-call-in-c/
  */
 
 int main() {
