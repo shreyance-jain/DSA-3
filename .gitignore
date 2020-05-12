@@ -22,3 +22,12 @@
 /local.cc
 /try.cc
 /.DS_Store
+/task.cc
+/heap/median*
+/heap/kth_largest_element.cc
+/contest.cc
+/heap/kth_smallest_element.cc
+/heap/k_largest_element_in_a_stream.cc
+heap/k_most_occuring_elements-set1.cc
+heap/k_most_occuring_elements-set2.cc
+heap/rearrange_characters_no_adjacent_same.cc
