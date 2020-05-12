@@ -129,7 +129,7 @@ double FindMedian::getMedian() {
     return median;
 }
 
-// Time Complexity: 
-
+// Time Complexity: O(nlogn) extract min or extract max and insert are log(n) operations
+// Aux Space Complexity: O(n)
 // Company Tags: Adobe, Amazon, Apple, Belzabar, D-E-Shaw, Facebook, Flipkart, Google, Intuit
 // Microsoft, Morgan Stanley, Ola Cabs, Oracle, Samsung, SAP Labs, Yahoo
