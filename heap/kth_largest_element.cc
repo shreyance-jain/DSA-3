@@ -89,7 +89,15 @@ int kthLargest(int arr[], int n, int k) {
     return pq.top();
 }
 
-// Time Complexity:
+/* 
+Time Complexity: O(k + (n-k)*logk)
+O(k) for buildiing the initial heap of first k elements (we can modify the above code
+to initialise the heap with first k elements and then run the loop starting from
+(k+1)th element)
+O(n-k * log k) for remaining (n-k) it will be extract min and insert opertions
+both will be log(k) operations
+*/
+
 
 // PRO CODE
 int KthLargest(int arr[], int n, int k) {
