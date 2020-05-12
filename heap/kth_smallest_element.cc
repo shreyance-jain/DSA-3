@@ -66,20 +66,20 @@ int main(){
 
 /* 
 Approach: Idea is same as k largest element
-Here since we want the smallest element, we will maintain a max heap.
+Here since we want the smallest element, we will maintain a MAX HEAP.
 Element element less than top will be pushed top will be popped.
 In the end we are left with k smallest element.
 And the top one would be kth smallest
 
 Algo:
-1. Create and maintain MaxHeap of size k.
+1. Create and maintain MAX HEAP of size k.
 2. While inserting elements in heap kepp check whether size of heap is less than k.
 If size of heap becomes k and tompost element of heap is more than kth(index starting from 0)
 element of array then remove the tompost element and insert current element of array.
 Do this while i < n. Finally print the topmost element of heap.
  */
 int kthSmallest(int arr[], int n, int k) {
-    priority_queue<int> pq;
+    priority_queue<int> pq; // MAX HEAP
     for(int i = 0; i < n; i++) {
         if (pq.size() == k && arr[i] < pq.top()) {
             pq.pop();
@@ -91,6 +91,12 @@ int kthSmallest(int arr[], int n, int k) {
     return pq.top();
 }
 
-
-// Time complexity: O(nlogk)
+/* 
+Time Complexity: O(k + (n-k)*logk)
+O(k) for buildiing the initial MAX HEAP of first k elements (we can modify the above code
+to initialise the heap with first k elements and then run the loop starting from
+(k+1)th element)
+O(n-k * log k) for remaining (n-k) it will be extract max and insert opertions
+both will be log(k) operations
+*/
 // Space complexity: O(k)
