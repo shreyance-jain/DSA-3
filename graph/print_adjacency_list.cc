@@ -75,10 +75,10 @@ int main() {
 }
 
 void printGraph(vector<int> adj[], int v) {
-    for(int i = 0; i < v; i++) {
-        cout << i;
-        for(int j : adj[i])
-            cout << "-> " << j;
+    for(int i = 0; i < v; i++) { // traverse the adjacency list for every vertex
+        cout << i;               //  print the vertex id
+        for(int j : adj[i])      // traverse through all the connected component of the vertex
+            cout << "-> " << j;  // print the connected vertex id
         cout << endl;
     }
 }
