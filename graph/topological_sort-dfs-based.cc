@@ -90,7 +90,9 @@ int main() {
 }
 
 /*
-Approach: DFS Based Approach
+Approach: DFS Based Approach and Maintains a stack
+Works on concept (the is the invariant of the below algortim): A vertex goes into the stack
+only when dependents are pushed
 For detailed explanation refer notes
 */
 void dfs(vector<int> adj[], int s, bool vis[], stack<int> &st) {
