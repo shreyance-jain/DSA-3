@@ -88,10 +88,8 @@ void dfs(int s, vector<int> g[], bool vis[]) {
     vis[s] = true;              // mark the current source vertex as visited
     cout << s << " ";           // print the vertex
     for(int u : g[s]) {         // traverse through all connected component of source s
-        if (vis[u] == false) {
-            vis[u] = true;
+        if (vis[u] == false)
             dfs(u, g, vis);     // if they are not visited, recur on them i.e recursively call dfs
-        }
     }
 }
 
