@@ -126,5 +126,7 @@ int* topoSort(int V, vector<int> adj[]) {
 }
 
 // Time Complexity: O(V+E) same as DFS
+// Time Complexity: The outer for loop will be executed V number of times and 
+// he inner for loop will be executed E number of times, Thus overall time complexity is O(V+E).
 
 // Company Tags: Accolite, Amazon, Flipkart, Microsoft, Moonfrog Labs, Morgan Stanley, OYO Rooms, Samsung, Visa
