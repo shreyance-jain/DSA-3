@@ -126,7 +126,11 @@ int countXShapes(char **adj, int N, int M) {
     return count;
 }
 
-/* Naive approach contains a lot of redundant code, see set-2 for the efficient and pro code */
+/* Naive approach contains a lot of redundant code, see set-2 for the efficient and pro code
+The initial data structure to take input from the user can be a vector of string
+instead of matrix which makes taking input as lot simpler and 
+input is modified instead of a maintaing a visited matrix*/
+
 // Time Complexity: Same as DFS of adjacency matrix
 
 // Company Tags: Amazon, Google
