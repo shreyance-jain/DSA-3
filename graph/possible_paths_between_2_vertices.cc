@@ -116,3 +116,6 @@ int Graph::countPaths(int s, int d) {
 }
 // Time Complexity: O(N!)
 // If the graph is complete then there can be around N! recursive calls, so it is upper bounded by N!
+
+// We can use backtracking concepts to reduce
+// no of dfs calls to paths which can be safely avoided - implementation in set-2
