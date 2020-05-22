@@ -86,7 +86,7 @@ int main()
 /* 
 Approach: 
 Naive Approach: Same as number of islands
-Maintains a visited array and recur on all the 4 allowed directions
+Maintains a visited array and perform dfs on 4 allowed directions
  */
 bool isSafe(char **adj, int row, int col, bool **visited, int N, int M) {
     if (row >= 0 && row < N && col >= 0 & col < M &&
