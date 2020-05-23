@@ -87,7 +87,7 @@ void nearest(vector<vector<int>> &arr, int row, int col) {
     
     // DFS Based approach
     // might have to take visited matrix
-    // perform normalisation in some form
+    // perform relax operation
     
     vector<vector<bool>> source(row, vector<bool>(col, false));
     vector<vector<bool>> visited(row, vector<bool>(col, false));
@@ -102,6 +102,10 @@ void nearest(vector<vector<int>> &arr, int row, int col) {
     for(int i = 0; i < row; i++)
         for(int j = 0; j < col; j++) {
             if (arr[i][j] == 1 && source[i][j] == true) {
+                // We have to call for all the neighbour vertices
+                // if we don't then, though all the vertices would be reachable
+                // but the difference will come in distance from nearest 1
+                // (beacuse ifSafe function is returning false for source)
                 dfs(arr, source, i, j-1, row, col, 1, visited);
                 dfs(arr, source, i, j+1, row, col, 1, visited);
                 dfs(arr, source, i-1, j, row, col, 1, visited);
