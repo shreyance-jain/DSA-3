@@ -117,12 +117,15 @@ void nearest(vector<vector<int>> &arr, int row, int col) {
         int nextx[] = {0, 0, -1, 1};
         int nexty[] = {1, -1, 0, 0};
         
+        // all 4 adjacent neighbours
         for(int i = 0; i < 4; i++) {
             int adjx = x + nextx[i];
             int adjy = y + nexty[i];
-            
+            // relax opertation
             if (adjx >= 0 && adjx < row && adjy >= 0 && adjy < col &&
                 distance[adjx][adjy] > distance[x][y] + 1) {
+                    // update distance
+                    // & push to queue for further BFS
                     distance[adjx][adjy] = distance[x][y] + 1;
                     q.push({adjx, adjy});
                 }
