@@ -1,4 +1,48 @@
-// { Driver Code Starts
+/* 
+Distance of nearest cell having 1
+
+Difficulty: Medium
+
+Problem Statement
+
+Given a binary matrix of size N x M.
+The task is to find the distance of nearest 1 in the matrix for each cell.
+The distance is calculated as |i1 – i2| + |j1 – j2|, where i1, j1 are the
+row number and column number of the current cell and i2, j2
+are the row number and column number of the nearest cell having value 1.
+
+Input:
+The first line of input is an integer T denoting the number of test cases. Then T test cases follow.
+Each test case consists of 2 lines. The first line of each test case contains two integers M and N
+denoting the number of rows and columns of matrix. Then in the next line are N*M space separated
+values of the matrix (mat) .
+
+Output:
+For each test case in a new line print the required distance matrix in a single line separated by space.
+
+Constraints:
+1 <= T <= 50
+1 <= N, M <= 1000
+0 <= mat[i][j] <= 1
+
+Example:
+Input:
+2
+2 2 
+1 0 0 1
+1 2
+1 1
+
+Output:
+0 1 1 0
+0 0
+
+Explanation:
+Testcase 1:
+1 0
+0 1
+0 at {0, 1} and 0 at {1, 0} are at 1 distance from 1s at {0, 0} and {1, 1} respectively.
+ */
 
 #include <bits/stdc++.h>
 
