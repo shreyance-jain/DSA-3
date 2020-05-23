@@ -99,6 +99,3 @@ void nearest(vector<vector<int>> &arr, int row, int col) {
 // TIME COMPLEXITY: traversing every element is matrix is (M*N)
 // and is is traversing the complete matrix for every source vertex
 // so we can say greater then O(M*N)
-// If every vertex is source vertex we have an optimisation in code which check if is source vertex
-// then return, so in that case we will be simply calling the function for every vertex and
-// no other work, so it will be Theta(M*N) in that case
