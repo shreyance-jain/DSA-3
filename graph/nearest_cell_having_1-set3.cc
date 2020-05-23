@@ -125,7 +125,8 @@ void nearest(vector<vector<int>> &arr, int row, int col) {
             if (adjx >= 0 && adjx < row && adjy >= 0 && adjy < col &&
                 distance[adjx][adjy] > distance[x][y] + 1) {
                     // update distance
-                    // & push to queue for further BFS
+                    // & push to queue for further BFS, otherwise will check for
+                    // only neighbours of initial elements in queue and stop there
                     distance[adjx][adjy] = distance[x][y] + 1;
                     q.push({adjx, adjy});
                 }
