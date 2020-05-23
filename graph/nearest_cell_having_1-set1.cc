@@ -124,6 +124,7 @@ void nearest(vector<vector<int>> &arr, int row, int col) {
 }
 
 // NOTE: Code gives TLE
+// this is why BFS is best to solve shortest distance based problemss
 
 // TIME COMPLEXITY: traversing every element is matrix is (M*N)
 // and is is traversing the complete matrix for every source vertex
