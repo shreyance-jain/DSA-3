@@ -57,6 +57,7 @@ int findMaxArea(int n, int m, int g[SIZE][SIZE]);
 *   n, m: row and column of matrix
 *   g[][]: 2D matrix from input
 */
+
 int main()
 {
     int t;
