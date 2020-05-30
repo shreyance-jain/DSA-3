@@ -82,3 +82,7 @@ void nearest(vector<vector<int>> &arr, int row, int col) {
     
     print(sol, row, col);
 }
+
+// TIME COMPLEXITY: same as BFS O(M*N)
+
+// NOTE: Based on BFS concept, visits nodes in shortest path manner
