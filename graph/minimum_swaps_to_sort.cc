@@ -76,6 +76,13 @@ Hence,
 ans = Σi = 1k(cycle_size – 1), where k is the number of cycles
 
 For detailed explanation of this concept see notes
+
+This is achieved by
+The idea is to create a array of pair in C++ with
+first element as array values and second element as array indices.
+The next step is to sort the vector of pair according to the first element of the pair.
+After that we traverse this array and move in cycles, keep track of visited and count
+cycle size, and add to ans
  */
 int minSwaps(int arr[], int N){
     // create an array of pairs where first element is the array element
