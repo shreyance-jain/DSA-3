@@ -136,9 +136,7 @@ void nearest(vector<vector<int>> &arr, int row, int col) {
     print(distance, row, col);
 }
 
-// TIME COMPLEXITY: traversing every element is matrix is (M*N)
-// and is is traversing the matrix for every source vertex
-// so we can say greater then O(M*N)
+// TIME COMPLEXITY: same as BFS O(M*N)
 
 // NOTE: Here we would not vist a vertex twice as BFS visits in shortest
 // path manner (see explicit implementation in set-5)
