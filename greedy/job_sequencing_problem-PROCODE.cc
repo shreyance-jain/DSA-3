@@ -75,3 +75,5 @@ void printJobScheduling(Job arr[], int n)
 /*
 for (int j=min(n, arr[i].dead)-1; j>=0; j--)
 */
+
+// COMPANY TAGS: Accolite
