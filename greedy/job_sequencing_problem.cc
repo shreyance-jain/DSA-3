@@ -148,3 +148,5 @@ and begin the index from last if the deadline is greater than n
 And can also avoid the equal profit condition check in comparator as it is
 not required
 */
+
+// COMPANY TAGS: Accolite
