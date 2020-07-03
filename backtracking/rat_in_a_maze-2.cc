@@ -64,3 +64,10 @@ From m[1][3] we can move downwards taking 1 jump each time to reach destination 
 Testcase 2: As no path exists, so -1.  
  */
 
+/* 
+POINT TO NOTE!
+Problem statement restricts the rat to move in forward and downward
+which in turn in equivalent to forcing the rat to move only in
+forward direction which avoid cycle creation in path of rat
+within the maze matrix
+ */
