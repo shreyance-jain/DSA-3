@@ -42,6 +42,8 @@ the destination or not. If path does not reaches the destination the backtrack a
 using namespace std;
 
 bool solveMaze(vector<vector<int> >  maze, int n);
+
+/* Utitlity function to print solution matrix */
 void print(vector<vector<int> >  sol, int N) {
   cout << "Maze solved\n";
   for(int i = 0; i < N; i++) {
@@ -69,26 +71,37 @@ int main() {
   return 0;
 }
 
+// BACKTRACKING STANDARD IS-SAFE FUNCTION
+// Function to check if x and y is a vaid move
 bool isSafe(vector<vector<int> >  maze, int x, int y, int n) {
   return (x < n && y < n && maze[x][y]);
 }
 
 bool solveMazeUtil(vector<vector<int> >  maze, int x, int y, vector<vector<int> >  &sol, int N) {
+  // if x and y is goal return true
   if (x == N-1 && y == N-1 && maze[x][y] == 1) {
     sol[x][y] = 1;
     return true;
   }
+  // check if x and y is valid move
   if (isSafe(maze, x, y, N)) {
+    // mark x and y as the solution path
     sol[x][y] = 1;
+    // move forward in downward(D) direction
     if (solveMazeUtil(maze, x + 1, y, sol, N) == true)
       return true;
+    // if moving in downward direction doesn't give a solution
+    // move forward in Right(D) direction
     if (solveMazeUtil(maze, x, y + 1, sol, N) == true)
       return true;
+    // if none of the above movements work then BACKTRACK: unmark
+    // x and y as part of the solution matrix
     sol[x][y] = 0;
   }
   return false;
 }
 
+// Wrapper over the main recursive function above
 bool solveMaze(vector<vector<int> >  maze, int n) {
   vector<vector<int> >  sol(n);
   for(int i = 0; i < n; i++)
@@ -102,3 +115,10 @@ bool solveMaze(vector<vector<int> >  maze, int n) {
     return true;
   }
 }
+
+/* Complexity:
+Time Complexity: O(2^(n^2))
+The recursion can run upper bound 2^(n^2) times
+Space Complexity:
+For output matrix extra space n*n is needed
+ */
