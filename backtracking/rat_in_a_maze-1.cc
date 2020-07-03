@@ -122,3 +122,11 @@ The recursion can run upper bound 2^(n^2) times
 Space Complexity:
 For output matrix extra space n*n is needed
  */
+
+/* 
+POINT TO NOTE!
+Problem statement restricts the rat to move in forward and downward
+which in turn in equivalent to forcing the rat to move only in
+forward direction which avoid cycle creation in path of rat
+within the maze matrix
+ */
