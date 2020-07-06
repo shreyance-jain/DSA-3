@@ -71,3 +71,109 @@ which in turn in equivalent to forcing the rat to move only in
 forward direction which avoid cycle creation in path of rat
 within the maze matrix
  */
+
+#include <iostream>
+#include <vector>
+using namespace std;
+
+void print(int n, vector<int> sol[]) {
+    for (int i = 0; i < n; i++) {
+        for (int j = 0; j < n; j++) {
+            cout << sol[i][j] << " ";
+        }
+        cout << endl;
+    }
+}
+
+void solve(int n, vector<int> maze[]);
+
+int main() {
+    int t;
+    cin >> t;
+    while (t--) {
+        int n;
+        cin >> n;
+        vector<int> maze[n];
+        for (int i = 0; i < n; i++) {
+            maze[i].assign(n, 0);
+            for (int j = 0; j < n; j++) cin >> maze[i][j];
+        }
+
+        solve(n, maze);
+    }
+    return 0;
+}
+
+/* 
+Naive Approach:
+The Naive Algorithm is to generate all paths from source to destination
+and one by one check if the generated path satisfies the constraints
+Naive Algo:
+while there are untried paths {
+  generate the next path
+  if this path hsa all blocks as non zero{
+    print this path
+  }
+}
+ */
+/* Backtracking Approach:
+If destination is reached print the matrix
+  print the solution matrix
+Else
+  a) Mark the current cell in solution matrix as 1
+  b) Move forward/jump (for each valid steps) in horizontal direction
+     and recursively check if this leads to a solution
+  c) If the move chosen in the above step doesn't lead to a solution
+     then move down and check if this move leads to a solution
+  d) If none of the above solutions work then unmark this cell as 0
+     (BACKTRACK) and return false
+ */
+bool isSafe(int N, vector<int> maze[], int x, int y) {
+  // the safe condition is when x and y are in bounds and matrix value is != 0
+  return (x < N && y < N && maze[x][y] != 0);
+}
+
+bool solveUtil(int N, vector<int> maze[], vector<int> sol[], int x, int y) {
+  // if condition matches return true, also base case
+  if (x == N-1 && y ==  N-1) {
+    // mark x and y as part of sol
+    sol[x][y] = 1;
+    return true;
+  }
+  if (isSafe(N, maze, x, y)) {
+    // marking (x, y) as part of the current solution
+    sol[x][y] = 1;
+
+    // checking for further paths
+    for(int i = 1; i <= maze[x][y] && i < N; i++) {
+      if (solveUtil(N, maze, sol, x, y+i) == true)
+        return true;
+      else if (solveUtil(N, maze, sol, x+i, y) == true)
+        return true;
+    }
+    // if no possible path in the direction, then mark (x,y) as
+    // not part of the solution
+    // DOING BACKTRACKING and RETRUN FALSE
+    sol[x][y] = 0;
+    return false;
+  }
+  // if not safe return false
+  return false;
+}
+
+void solve(int N, vector<int> maze[]) {
+  vector<int> sol[N];
+  for(int i = 0; i < N; i++)
+    sol[i] = vector<int>(N, 0);
+    // if no path found
+    if (solveUtil(N, maze, sol, 0, 0) == false) {
+      cout << "-1" << endl;
+    } else {
+      // if path found
+      print(N, sol);
+    }
+}
+
+// To do - do time complexity analysis
+// Time Complexity: O(N^N)
+// Space Complexity: O(N) if we don't consider the solution matrix for this
