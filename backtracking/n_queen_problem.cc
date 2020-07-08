@@ -146,3 +146,5 @@ void nqueen(int n) {
         cout << -1;
     cout << endl;
 }
+
+// Compnay Tags: Accolite, Amazon, Amdocs, DE-Shaw, MAQ Software, Twitter, Visa
