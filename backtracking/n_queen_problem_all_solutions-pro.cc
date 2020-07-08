@@ -86,29 +86,33 @@ bool isSafe(int placement[MAX][MAX], int col, int row, int n) {
 }
 
 /* Recursive backtracking functon */
-bool nqueenUtil(int col, int placement[MAX][MAX], int n, bool &res) {
+bool nqueenUtil(int col, int placement[MAX][MAX], int n) {
     if (col == n) {
-        res = true;
         print(placement, n);
+        // return true
+        return true;
     }
+    // initiate result for every call
+    bool res = false;
     for(int i = 0; i < n; i++) {
         if (isSafe(placement, col, i, n)) {
             placement[i][col] = 1;
-            nqueenUtil(col+1, placement, n, res);
+            // if true even once, will remain true for the column
+            res = nqueenUtil(col+1, placement, n) || res;
             placement[i][col] = 0; 
         }
     }
-    return false;
+    // return res
+    return res;
 }
 
 void nqueen(int n) {
     int placement[MAX][MAX];
     memset(placement, 0, sizeof(placement));
-    bool res = false;
-    nqueenUtil(0, placement, n, res);
+    bool res = nqueenUtil(0, placement, n);
     if (!res)
         cout << -1;
     cout << endl;
 }
-// See pro code also (different style to handle boolean res)
+
 // Compnay Tags: Accolite, Amazon, Amdocs, DE-Shaw, MAQ Software, Twitter, Visa
