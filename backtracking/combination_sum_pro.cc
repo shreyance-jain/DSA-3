@@ -110,6 +110,7 @@ int main(){
 // Passing the current by reference reduces it to 0.40 sec
 void combinationSumUtil(vector<int> &A, int sum, vector<vector<int>> &result, vector<int> &current, int pos) {
     // push the combination if sum becomes 0
+    // !IMP Avoids sum calulation of current in every recursive calls
     if (sum == 0) {
         result.push_back(current);
         return;
