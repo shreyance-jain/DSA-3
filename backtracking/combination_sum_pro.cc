@@ -116,7 +116,9 @@ void combinationSumUtil(vector<int> &A, int sum, vector<vector<int>> &result, ve
         return;
     }
     // return if conditions out of bound
-    if (sum < 0 || pos >= A.size())
+    // NOTE: We can wrap the below recursive calls in this logic
+    // and make it look like standard backtracking solution (see function below)
+    if (sum < 0 || pos >= A.size()) 
         return;
     
     // push to current possible answer
@@ -152,3 +154,39 @@ vector<vector<int> > combinationSum(vector<int> &A, int B) {
 }
 
 // Company Tags: Adobe, Amazon, Microsoft
+
+
+// YET ANOTHER STYLE
+// same as my code with sum calculation optimisation
+void findNumbers(vector<int>& ar, int sum, 
+                 vector<vector<int> >& res, 
+                 vector<int>& r, int i) 
+{ 
+    // If  current sum becomes negative 
+    if (sum < 0) 
+        return; 
+  
+    // if we get exact answer 
+    if (sum == 0) 
+    { 
+        res.push_back(r); 
+        return; 
+    }
+  
+    // Recur for all remaining elements that 
+    // have value smaller than sum. 
+    while (i < ar.size() && sum - ar[i] >= 0) 
+    { 
+  
+        // Till every element in the array starting 
+        // from i which can contribute to the sum 
+        r.push_back(ar[i]); // add them to list 
+  
+        // recur for next numbers 
+        findNumbers(ar, sum - ar[i], res, r, i); 
+        i++; 
+  
+        // remove number from list (backtracking) 
+        r.pop_back(); 
+    } 
+} 
