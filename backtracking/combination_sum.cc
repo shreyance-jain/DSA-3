@@ -126,10 +126,12 @@ bool isSafe(vector<int> &sum, int B, int item) {
 // ! NOTE: We can pass sum vector (which represents individual sum array in res) as reference
 // as we will be using one array at a time in recursion to store results
 // it also eliminates copy overhead and reduces execution time
+// EXECUTION TIME IN GFGS IDE IS COMING approx 1.80 sec
+// Passing the sum by reference reduces it to 0.80 sec
 void combinationSumUtil(vector<int> &A, vector<vector<int>> &res, int B, vector<int> &sum, int index) {
     // if sum push to result and return as no more elements can be included in this sum now
-    if (isSum(sum, B)) {
-        res.push_back(sum);
+    if (isSum(sum, B)) { // See PRO CODE for optimisation, we maintain sum and do not calculate sum
+        res.push_back(sum); // at each recursive call
         return;
     }
     // try for every element
