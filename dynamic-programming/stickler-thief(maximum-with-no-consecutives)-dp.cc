@@ -80,5 +80,8 @@ ll FindMaxSum(ll arr[], ll n)
     return dp[n];
 }
 
+/* Please note: In this solution for a value of n we only need results of
+n-1 and n-2, we can optimise it to work in O(1) like Fibonacci Numbers */
+
 // Tags: Easy
 // Company Tags: Amazon, OYO, Paytm, Walmart
