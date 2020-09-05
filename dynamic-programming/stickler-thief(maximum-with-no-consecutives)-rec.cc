@@ -80,5 +80,7 @@ ll FindMaxSum(ll arr[], ll n)
               FindMaxSum(arr, n-1));
 }
 
+// Time Complexity: O(2^n)
+
 // Tags: Easy
 // Company Tags: Amazon, OYO, Paytm, Walmart
