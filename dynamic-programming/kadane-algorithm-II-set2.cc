@@ -137,7 +137,7 @@ long long maximumSum(int arr[], int sizeOfArray)
    return (dp[sizeOfArray-1]); 
 }
 
-// Note: Geeks Solution takes 2 traversals of the input array
+// Note: Geeks Solution, CONCEPT: ELIMINATE NEGATIVE IN DP ARRAY takes 2 traversals of the input array
 // My solution: 1 traversal of the input array
 
 // Time Complexity: O(N)
