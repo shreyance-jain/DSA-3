@@ -91,3 +91,7 @@ long long countWays(int n){
 
 // Tags: Easy
 // Company Tags: Amazon
+
+/* NOTE: Same as:
+- Count Ways to Reach nth Stair
+- Reach a given Score */
