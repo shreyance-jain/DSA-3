@@ -81,3 +81,7 @@ long long countWays(int n){
 // Time Complexity: O(3^n) where n is the top where the frog has to reach
 // as at every step we have 3 possiblities, which is
 // either take 1, 2 or 3 steps.
+
+/* NOTE: Same as:
+- Count Ways to Reach nth Stair
+- Reach a given Score */
