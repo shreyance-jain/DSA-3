@@ -28,15 +28,11 @@ Expected Time Complexity: O(N2)
 Expected Auxiliary Space: O(N)
  */
 
-// { Driver Code Starts
 #include<bits/stdc++.h>
-
-
 using namespace std;
 
 int countWays(int);
 
-// Driver program
 int main()
 {
     //taking number of testcases
@@ -50,8 +46,7 @@ int main()
         cout<<countWays(n)<<endl;
     }
     return 0;
-}// } Driver Code Ends
-
+}
 
 int mod = 1000000007;
 
