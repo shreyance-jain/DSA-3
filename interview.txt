@@ -1,0 +1,70 @@
+// Function to convert given array to wave like array
+// a1 >= a2 <= a3 >= a4 <= a5...
+
+customer
+customer id        |    int
+customer name      |    varchar
+customer address   |    varchar
+
+menu
+menu id     |   int
+menu name   |  varchar
+menu price  |   int
+
+
+order
+order id    |   int
+menu id     |   int
+customer id |   int
+
+
+Find the top 3 most popular order. 
+
+nodejs => promise.all and promise.allSettled
+
+mongodb
+
+order id | order description | price | date | customerid
+Indexing
+
+3D space heap question
+
+binary tree question
+
+graph m coloring question
+
+rest endpoints
+
+The stock span problem is a financial problem where we have a series of n daily price quotes
+for a stock and we need to calculate the span of stock’s price for all n days. 
+The span Si of the stock’s price on a given day i is defined as the maximum number of
+consecutive days just before the given day, for which the price of the stock on the
+current day is less than or equal to its price on the given day.
+
+For example, if an array of 7 days prices is given as {100, 80, 60, 70, 60, 75, 85},
+then the span values for corresponding 7 days are {1, 1, 1, 2, 1, 4, 6}.
+
+Given two strings s1 and s2. The task is to check if s2 is a rotated version of the string s1.
+The characters in the strings are in lowercase.
+
+geeksforgeeks
+forgeeksgeeks
+mightandmagic
+andmagicmigth
+mushroomkingdom
+itsamemario
+geekofgeeks
+geeksgeekof
+
+10 4 5 90 120 80
+
+mushroomkingdom
+itsamemario
+
+1 1 2 4 5 1
+
+freshcanfresh
+forfreshfresh
+
+10 4 5 90 120 80
+1 1 2 4 5 1
